@@ -1,0 +1,25 @@
+git@us-south.git.cloud.ibm.com:deepak.kumar.jaiswal/ticket_classification.git
+
+npm run client
+
+create table DirectoryData(FirstName varchar(30),LastName varchar(30)
+,company_name varchar(40)
+, address varchar(100)
+,city varchar(30), county varchar(30)
+, state varchar(30),
+zip bigint, phone bigint
+, Alternate_phone bigint
+,email varchar(50));
+
+private static String first_name;
+	private static String last_name;
+	private static String company_name;
+	private static String address;
+	private static String city;
+	private static String county;
+	private static String state;
+	private static long zip;
+	private static long phone;
+	private static long Alternate_phone;
+	private static String email;
+	
