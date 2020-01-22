@@ -22,21 +22,21 @@ public class UploadData extends HttpServlet {
 		String desc = req.getParameter("description");
 		String fileName = req.getParameter("file"); // Retrieves <input type="file"
 
-		ExcelFile upload=new ExcelFile();
-		
-		ArrayList<HashMap> data= upload.uploadFile(fileName);
-		if(data!=null){
-			DAO db=new DAO();
+		ExcelFile upload = new ExcelFile();
+
+		ArrayList<HashMap> data = upload.uploadFile(fileName);
+		if (data != null) {
 			try {
-				int cnt=db.uploadData(data);
-				PrintWriter out=res.getWriter();
-				out.print("toal records updated "+cnt);
-			} catch (SQLException e) {
+				DAO db = new DAO();
+				int cnt = db.uploadData(data);
+				PrintWriter out = res.getWriter();
+				out.print("toal records updated " + cnt);
+			} catch (SQLException | ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		System.out.println("Desc " + desc);
-		
+
 	}
 }

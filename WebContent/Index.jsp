@@ -18,8 +18,17 @@
 	<div>
 		<form action="Create">
 			
-			<button href="Create.jsp">Submit</button>
+			<button ><a href="Create.jsp">Submit</a> </button>
 		</form>
+		
+	</div>
+	
+		<div>
+		<form action="Create">
+			
+			<button ><a href="showData">See Data</a> </button>
+		</form>
+		
 	</div>
 </body>
 </html>

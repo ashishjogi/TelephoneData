@@ -14,7 +14,7 @@ public class PersonDetails {
 	private static long Alternate_phone;
 	private static String email;
 
-	PersonDetails(String first_name, String last_name, String company_name, String address, String city, String county,
+	public PersonDetails(String first_name, String last_name, String company_name, String address, String city, String county,
 			String state, long zip, long phone, long Alternate_phone, String email) {
 
 		this.first_name = first_name;

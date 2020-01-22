@@ -17,11 +17,11 @@ public class ExcelFile {
 	private static String company_name;
 	private static String address;
 	private static String city;
-	private static String county;
+	private static String country;
 	private static String state;
 	private static long zip;
-	private static String phone;
-	private static String Alternate_phone;
+	private static long phone;
+	private static long Alternate_phone;
 	private static String email;
 
 	ArrayList<HashMap> data = new ArrayList<HashMap>();
@@ -29,7 +29,7 @@ public class ExcelFile {
 	public ArrayList<HashMap> uploadFile(String Filename) throws IOException {
 		ArrayList<HashMap> data = new ArrayList();
 
-		String filePath = "C://Users//ashish.sunilrao.jogi//Documents//"+Filename;
+		String filePath = "C://Users//Ashish Jogi//homeNewWorkspace//" + Filename;
 		FileInputStream fis = new FileInputStream(filePath);
 
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
@@ -44,11 +44,9 @@ public class ExcelFile {
 			Iterator<Cell> cite = row.cellIterator();
 			HashMap<String, Object> map = new HashMap<String, Object>();
 			if (cellNumber != 0) {
-				System.out.println("in if");
 				for (int j = 0; j < 11; j++) {
 					while (cite.hasNext()) {
 
-						System.out.println("j" + j);
 						Cell c = cite.next();
 						if (j == 0 && !c.toString().isEmpty()) {
 							first_name = c.toString();
@@ -76,8 +74,8 @@ public class ExcelFile {
 							j++;
 						} else if (j == 5) {
 
-							county = c.toString();
-							map.put("county", county);
+							country = c.toString();
+							map.put("country", country);
 							j++;
 						} else if (j == 6) {
 
@@ -93,14 +91,17 @@ public class ExcelFile {
 							j++;
 
 						} else if (j == 8) {
-
-							phone = c.toString();
+							String num = c.toString();
+							num = num.replace("-", "");
+							phone = Long.parseLong(num);
 							map.put("phone", phone);
 							j++;
 
 						} else if (j == 9) {
 
-							Alternate_phone = c.toString();
+							String num = c.toString();
+							num = num.replace("-", "");
+							Alternate_phone = Long.parseLong(num);
 							map.put("Alternate_phone", Alternate_phone);
 							j++;
 
@@ -115,6 +116,8 @@ public class ExcelFile {
 					}
 
 				}
+
+				System.out.println("data :" + data.toString());
 				data.add(map);
 				wb.close();
 				fis.close();

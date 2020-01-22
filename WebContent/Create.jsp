@@ -4,34 +4,42 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add Phone Details</title>
+<title>create</title>
+<style>
+div {
+	height: 500px;
+	width: 400px;
+	margin-left: 300px;
+	margin-top: 100px;
+	
+}
+
+input[type="text"] {
+	width: 100%;
+	height: 15px;
+	margin-bottom: 10px;
+	background-color: #3CBC8D;
+	
+}
+</style>
 </head>
 <body>
 	<div>
 
+
 		<form action="Create">
-			<label> FirstName: </label>
-			<iput type="text" name="firstname" />
-			<label>LastName:</label>
-			<iput type="text" name="lastname" />
-			<label>Company name:</label>
-			<iput type="text" name="company" />
-			<label>Address: </label>
-			<iput type="text" name="address" />
-			<label>City:</label>
-			<iput type="text" name="city" />
-			<label>Country: </label>
-			<iput type="text" name="country" />
-			<label>State: </label>
-			<iput type="text" name="state" />
-			<label>Zip:</label>
-			<iput type="text" name="zip" />
-			<label>Phone:</label>
-			<iput type="text" name="phone" />
-			<label>Alternate Phone:</label>
-			<iput type="text" name="alternate" />
-			<label>Email: </label>
-			<iput type="text" name="email" />
+			<label> FirstName: </label> <br> <input type="text"
+				name="firstname" /> <label>LastName:</label> <br> <input
+				type="text" name="lastname" /> <label>Company name:</label> <br>
+			<input type="text" name="company" /> <label>Address: </label> <br>
+			<input type="text" name="address" /> <label>City:</label> <br>
+			<input type="text" name="city" /> <label>Country: </label> <br>
+			<input type="text" name="country" /> <label>State: </label> <br>
+			<input type="text" name="state" /> <label>Zip:</label> <br> <input
+				type="text" name="zip" /> <label>Phone:</label> <br> <input
+				type="text" name="phone" /> <label>Alternate Phone:</label> <br>
+			<input type="text" name="alternate" /> <label>Email: </label> <br>
+			<input type="text" name="email" />
 
 			<button>Add</button>
 		</form>
