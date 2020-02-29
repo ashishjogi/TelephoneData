@@ -1,5 +1,5 @@
 package com.Pojo;
-
+//modified by asish
 public class PersonDetails {
 
 	private static String first_name;
